@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Foods For the Ingredients</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+    
+        <nav class="navbar navbar-expand-lg bg-body-tertiary w-100">
+            <a class="navbar-brand" href="mainpage.html">
+                <img class="logo" src="Recipe Finder (1).png" alt="logo" width="30" height="24">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="mainpage.html">Home</a>
+                    <a class="nav-link" href="news.html">News</a>
+                    <a class="nav-link" href="tips.html">Tips&Tricks</a>
+                </div>
+                <div class="social-media ms-auto">
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <button id="dark-mode-btn" class="btn">DarkBackground</button>
+                </div>
+            </div>
+           
+        </nav>
+    </header>
+    <div class="container">
+        <div class="meal-wrapper">
+            <div class="meal-search">
+                <h2>Find Meals & Recipes For the Ingredients</h2>
+                <blockquote>To know how to eat well, one must first know how to wait</blockquote>
+
+                <div class="meal-search-box">
+                    <input type="text" class="search-control" placeholder="Enter an ingredient" id="search-input">
+                    <button type="submit" class="btn search-btn" id="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    
+                </div>
+              
+            </div>
+            <span id="error-msg" style="color:red; display:none;">Please enter an ingredient.</span>
+
+
+            <div class="meal-result">
+                <h2 class="title">Your Search Results:</h2>
+                
+                <div id="meal">
+                    <!-- Meal Item -->
+                </div>
+            </div>
+
+            <div class="meal-details">
+                <button class="btn recipe-close-btn" id="recipe-close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+
+
+                <div class="meal-details-content">
+                    <!-- Recipe content -->
+                </div>
+            </div>
+          
+        </div> 
+        <div class="two-sides-container" id="main-content">
+         <div class="main-content-left">
+                <h3>Welcome to Recipe Finder!</h3>
+                <p>
+                    Discover the joy of cooking with our easy-to-use Recipe Finder. Whether you're looking to create something with the ingredients you already have, or just want inspiration for your next meal, we've got you covered. Simply enter an ingredient, and explore a world of delicious recipes at your fingertips. Cooking has never been this simple and fun!
+                    
+                    Let’s get started and turn your ingredients into a culinary masterpiece!</p>
+           
+                    <div style="text-align: center; margin-top: 20px;">
+                        <button id="subscribe-btn" class="btn subscribe-btn">Subscribe</button>
+                    </div>
+                
+                    <div id="popup-form" style="display:none;">
+                        <form>
+                            <h2>Subscribe to our Newsletter</h2>
+                            <input type="email" id="email" placeholder="Enter your email">
+                            <button type="submit" onclick="validate()">Submit</button>
+                            <button type="button" id="close-popup">Close</button>
+                        </form>
+                    </div>
+                </div>
+            <div class="main-content-right">
+            <h1 class="header-right">Perfect recipe: Pasta alfredo </h1>
+             <img class="side-image" src="alfredo.jpg" alt="alfredo pasts">
+            </div>
+    </div>
+</div>
+    <div class="cards-container" id="latest-recipes">
+        <h2>Latest Recipes</h2>
+        <div class="row">
+          
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="cards1.webp" class="card-img-top" alt="nachos in a palate">
+                    <div class="card-body">
+                        <h5 class="card-title">The Best Recipes To Make For Football Watch Parties</h5>
+                        <a href="#" class="btn btn-primary">Read more</a>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="card2.webp" class="card-img-top" alt="back-to-school snacks">
+                    <div class="card-body">
+                        <h5 class="card-title">17 Of The Coolest Back-To-School Snacks That Take Under 10 Minutes To Make</h5>
+                        <a href="#" class="btn btn-primary">Read more</a>
+                    </div>
+                </div>
+            </div>
+         
+        </div>
+    </div>
+    <div class="faq-section" id="faq-section">
+        <h2>FAQs</h2>
+        <div class="faq-item">
+            <h3 class="faq-question">What is Recipe Finder?</h3>
+            <p class="faq-answer" style="display:none;">Recipe Finder helps you discover recipes based on ingredients you have.</p>
+        </div>
+        <div class="faq-item">
+            <h3 class="faq-question">How do I search for a recipe?</h3>
+            <p class="faq-answer" style="display:none;">Simply enter an ingredient in the search box and hit the search button.</p>
+        </div>
+    </div>
+
+
+
+<footer id="footer"><p> by: Kassymkyzy Raikhan IT-2303</p>
+    <div id="date-time" >
+</div>
+</footer>
+    <script src="script.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" ></script>
+
+</body>
+
+</html>
