@@ -1,5 +1,4 @@
 # Recipe Finder
-WEB Assignments
 
 A web-based application that helps users search for recipes based on their preferences, ingredients, and dietary restrictions. The Recipe Finder aims to make cooking enjoyable and accessible by offering a curated list of recipes tailored to individual tastes and requirements.
 
